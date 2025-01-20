@@ -1,5 +1,3 @@
-# Ironchip-Fraud-Detection-Web-SDK
-
 # LBFraud Web SDK
 
 ## How to use?
@@ -16,8 +14,18 @@ const client = new LBFraudSDK({
 
 //TransactionID (required,unique): transaction identifier request for fraud results
 //UserID (required): User identifier
+//ExtraData (optional)
 
 client.sendTransaction("transaction-id","user-id").then(() => {});
+
+// with ExtraData
+// const extraData = new Map();
+
+// extraData.set("key1", { name: "Pepe", age: "30" });
+// extraData.set("key2", { name: "Jane", age: 25 });
+// extraData.set("key3", { type: "example", value: 42 });
+
+// client.sendTransaction("transaction-id","user-id", extraData).then(() => {});
 ```
 
 ## Development
